@@ -28,7 +28,7 @@
             <input type="password" id="input" name="tipe" placeholder=" " require>
             <label for="input">Confirm password</label>
         </div>  
-        <p>haven account?<a href="login.php"> Login</a></p>
+        <p>have account?<a href="login.php"> Login</a></p>
         <center>
         <button type="submit" name="submit">Sign Up</button>
         </center>
