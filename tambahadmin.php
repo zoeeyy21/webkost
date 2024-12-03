@@ -45,7 +45,7 @@
   <div class="row">
     <div class="col-7">
          <div class="input">
-            <label for="">Nama Produk</label><br>
+            <label for="">Nama Kost</label><br>
             <input type="text" class="mt-3" name="nama_produk">
         </div>
         <div class="input">
