@@ -128,7 +128,7 @@ if (empty($_SESSION["username"])) {
         </div>
         <div class="container" style="margin-top: 3em;">
             <form class="d-flex justify-content-center" role="search" method="GET" action="">
-                <input class="cari" type="search" name="search" placeholder="Search Product"
+                <input class="cari" type="search" name="search" placeholder="Cari Kost"
                     value="<?php echo isset($_GET['search']) ? $_GET['search'] : ''; ?>">
                 <button class="cari-tombol" type="submit"><i data-feather="search" style="color: #004577;"></i></button>
             </form>
