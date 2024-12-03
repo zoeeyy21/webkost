@@ -1,2 +1,2 @@
-# Aku_sewa
-Aku Sewa adalah platform website penyewaan produk yang memudahkan pengguna untuk menyewa berbagai macam produk seperti peralatan elektronik, alat rumah tangga, kendaraan, dan lainnya dengan mudah dan cepat. 
+# Juragan_Kost
+Juragankost adalah sebuah platform digital yang dirancang untuk mempermudah pencarian, dan penyewaan. Dengan fitur yang intuitif, Juragankost membantu penyewa menemukan tempat tinggal yang sesuai dengan kebutuhan mereka, serta memberikan kemudahan bagi pemilik kos untuk memasarkan properti mereka.
