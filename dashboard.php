@@ -29,10 +29,12 @@ if (empty($_SESSION["username"])) {
             <ul class="menu-items">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#dokumentasi">Documentation</a></li>
-                <li><a href="#produk">Produk</a></li>
+                <li><a href="#dokumentasi">Our Mission</a></li>
+                <li><a href="#produk">Product</a></li>
             </ul>
-            <a href="logout.php" id="shopping-cart-button"><i data-feather="log-out" class="shopping"></i></a>
+            <a href="logout.php" id="shopping-cart-button" onclick="return confirmLogout();">
+                <i data-feather="log-out" class="shopping"></i>
+            </a>
         </div>
     </nav>
     <!-- Navbar End -->
@@ -103,28 +105,10 @@ if (empty($_SESSION["username"])) {
     <!-- Halaman 2 End -->
 
 
-    <!-- Halaman 3 -->
-    <div class="card text-center" style="margin-top: 7em;" id="dokumentasi">
-        <div class="card-header">
-            Documentation
-        </div>
-        <div class="card-body bdy" style="height: 18em;">
-            <h5 class="card-title" style="margin-top: 5em;">Juragan Kos</h5>
-            <p class="card-text">Misi kami adalah mempermudah akses mahasiswa terhadap Kost-Kostan yang diperlukan tanpa
-                harus membeli rumah. Dengan sistem sewa yang fleksibel, Anda dapat menghemat biaya dan ruang
-                penyimpanan,</p>
-            <a href="#produk"><button class="explore">Product</button></a>
-        </div>
-        <div class="card-footer text-muted">
-            2 days ago
-        </div>
-    </div>
-    <!-- Halaman 3 End -->
-
     <!-- Halaman 4 -->
     <div class="container-fluid" style="margin-top: 6em;" id="produk">
         <div class="title">
-            <h2>Kamar Sewa Pilihan</h2>
+            <h2>Pilihan Kamar Kost</h2>
         </div>
         <div class="container" style="margin-top: 3em;">
             <form class="d-flex justify-content-center" role="search" method="GET" action="">
@@ -166,6 +150,24 @@ if (empty($_SESSION["username"])) {
         </div>
     </div>
 
+    <!-- Halaman 3: Our Mission -->
+    <div class="card text-center" style="margin-top: 7em;" id="dokumentasi">
+        <div class="card-header">
+            Our Mission
+        </div>
+        <div class="card-body bdy" style="height: 18em;">
+            <h2 class="card-title" style="margin-top: 2em;">Juragan Kos</h2>
+            <p class="card-text">Misi kami adalah bikin hidup mahasiswa lebih gampang buat cari kost tanpa ribet dan
+                mahal. <br> Nggak perlu mikirin beli rumah, karena sistem sewa fleksibel kami bikin kamu hemat biaya,
+                hemat
+                tempat, dan tetap nyaman.<br> Di sini, semuanya serba simpel, transparan, dan pastinya sesuai kebutuhan
+                kamu
+                biar fokus ke hal penting lain kayak kuliah, ngejar mimpi, atau sekadar menikmati hidup!
+            </p>
+        </div>
+    </div>
+    <!-- Halaman 3 End -->
+
     <footer style="background-color: #004577;padding-bottom: 1em">
         <div class="container" style="margin-top: 7em;color: #C7C8CC;">
             <div class="row d-flex justify-content-center text-center">
@@ -178,31 +180,20 @@ if (empty($_SESSION["username"])) {
                         <a href="#about" class="footer-hover">About</a>
                     </p>
                     <p>
-                        <a href="#dokumentasi" class="footer-hover">Dokumentasi</a>
+                        <a href="#dokumentasi" class="footer-hover">Our Mission</a>
                     </p>
                     <p>
-                        <a href="#produk" class="footer-hover">Produk</a>
+                        <a href="#produk" class="footer-hover">Product</a>
                     </p>
                 </div>
                 <div class="col-3 mt-4">
-                    <h2>Popular Produk</h2>
-                    <p class="mt-5">
-                        <a href="#" style="text-decoration: none;color: #C7C8CC">Camera</a>
-                    </p>
-                    <p>
-                        <a href="#" style="text-decoration: none;color: #C7C8CC">Microphone</a>
-                    </p>
-                    <p>
-                        <a href="#" style="text-decoration: none;color: #C7C8CC">Genset</a>
-                    </p>
-                    <p>
-                        <a href="#" style="text-decoration: none;color: #C7C8CC">Lighting</a>
-                    </p>
+                    <div class="mt-5">
+                    </div>
                 </div>
                 <div class="col-3 mt-4">
                     <h2>Alamat</h2>
                     <div class="mt-5">
-                        +62812121212<br>
+                        +6282190908787<br>
                         <br>
                         Jl. Telekomunikasi No. 1 Terusan Buah Batu. Bandung 40257, Jawa Barat, Indonesia<br>
                     </div>
@@ -218,6 +209,11 @@ if (empty($_SESSION["username"])) {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
+    <script>
+        function confirmLogout() {
+            return confirm("Apakah Anda yakin ingin logout?");
+        }
+    </script>
 </body>
 
 </html>
