@@ -62,10 +62,9 @@
                 <h2>Juragan<span>Kost.</span></h2>
             </div>
             <ul class="menu-items">
-                <li><a href="dashboard.php">Home</a></li>
-                <li><a href="http://localhost/Aku_sewa-main/dashboard.php#about">About</a></li>
-                <li><a href="http://localhost/Aku_sewa-main/dashboard.php#dokumentasi">Documentation</a></li>
-                <li><a href="http://localhost/Aku_sewa-main/dashboard.php#produk">Produk</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#produk">Product</a></li>
+                <li><a href="#about">About Us</a></li>
             </ul>
             <a href="dashboard.php#produk"><i data-feather="arrow-left" class="shopping"></i></a>
         </div>
@@ -177,56 +176,7 @@
         
      </div>
 
-    <!-- Footer Start -->
-    <footer style="background-color: #004577;padding-bottom: 1em; width:100%;">
-<div class="container" style="margin-top: 7em;color: #C7C8CC;">
-  <div class="row d-flex justify-content-center text-center">
-    <div class="col-3">
-        <div style="margin-top: 7em;">
-            <p>Sewa<span style="color: #C7C8CC;">Produk</span><br></p>
-        </div>
-    </div>
-    <div class="col-3 mt-4 foter">
-        <h2>Link</h2>
-        <p class="mt-5">
-            <a href="#home" class="footer-hover">Home</a>
-        </p>
-        <p>
-            <a href="#about" class="footer-hover">About</a>
-        </p>
-        <p>
-            <a href="#galeri" class="footer-hover">Dokumentasi</a>
-        </p>
-        <p>
-            <a href="#tour" class="footer-hover">Produk</a>
-        </p>
-    </div>
-    <div class="col-3 mt-4">
-      <h2>Popular Produk</h2>
-        <p class="mt-5">
-            <a href="#" style="text-decoration: none;color: #C7C8CC">Camera</a>
-        </p>
-        <p>
-            <a href="#" style="text-decoration: none;color: #C7C8CC">Microphone</a>
-        </p>
-        <p>
-            <a href="#" style="text-decoration: none;color: #C7C8CC">Camera</a>
-        </p>
-        <p>
-            <a href="#" style="text-decoration: none;color: #C7C8CC">Microphone</a>
-        </p>
-    </div>
-    <div class="col-3 mt-4">
-        <h2>Alamat</h2>
-        <div class="mt-5">
-        +62812121212<br>
-        <br>
-        Jl. Telekomunikasi No. 1 Terusan Buah Batu. Bandung 40257, Jawa Barat, Indonesia<br>
-        </div>
-    </div>
-  </div>
-</div>
-</footer>
+
 
 
 

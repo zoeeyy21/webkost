@@ -83,7 +83,7 @@ $data = mysqli_fetch_assoc($query);
     </div>
 
 
-    <footer style="background-color:#F5F5F5;padding-bottom: 1em">
+    <footer style="background-color: #F5F5F5;padding-bottom: 1em">
         <div class="container" style="margin-top: 7em;color:#004577;">
             <div class="row d-flex justify-content-center text-center">
                 <div class="col-3 mt-4 foter">
@@ -95,7 +95,7 @@ $data = mysqli_fetch_assoc($query);
                         <a href="#produk" class="footer-hover">Product</a>
                     </p>
                     <p>
-                        <a href="#pemesanan" class="footer-hover">Order</a>
+                        <a href="#about" class="footer-hover">About Us</a>
                     </p>
                 </div>
                 <div class="col-3 mt-4">
@@ -109,6 +109,12 @@ $data = mysqli_fetch_assoc($query);
                     <h4>ALAMAT</h4>
                     <div class="mt-5">
                         Jl. Telekomunikasi No. 1 Terusan Buah Batu. Bandung 40257, Jawa Barat, Indonesia<br>
+                    </div>
+                </div>
+                <div class="col-3 mt-4">
+                    <h4>TEAM</h4>
+                    <div class="mt-2">
+                        Faris Yahya<br>Cedric Satria<br>Geoffrey Putra<br>Ridho Muhammad<br>Rizky Firman
                     </div>
                 </div>
             </div>

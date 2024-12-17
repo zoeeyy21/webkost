@@ -89,6 +89,9 @@ if (empty($_SESSION["username"])) {
                             <h5 class="card-title"><?php echo $data['nama_produk']; ?></h5>
                             <h5 class="card-title" style="color: #004577;">Rp. <?php echo $data['harga']; ?><span
                                     class="text-muted">/bulan</span></h5>
+                            <h6 style="color: #004577; font-weight: normal;">Stok Tersedia:
+                                <span style="color: #28a745;"><?php echo $data['stok']; ?> kamar</span>
+                            </h6>
                             <div class="harga mt-4 d-flex">
                                 <p class="d-flex" style="gap: 0.5em"><i data-feather="map-pin" class="shopping"></i>Bandung
                                 </p>
@@ -181,7 +184,7 @@ if (empty($_SESSION["username"])) {
                 </div>
                 <div class="col-3 mt-4">
                     <h4>HUBUNGI KAMI</h4>
-                        <div class="mt-5">
+                    <div class="mt-5">
                         <p> +6282190908787</p>
                         <p>cs@juragankost.com</p>
                     </div>

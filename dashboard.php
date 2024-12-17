@@ -3,7 +3,6 @@ session_start();
 if (empty($_SESSION["username"])) {
     header("Location: login.php");
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +16,7 @@ if (empty($_SESSION["username"])) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <script src="https://unpkg.com/feather-icons"></script>
-    
+
 </head>
 
 <body>
@@ -73,7 +72,7 @@ if (empty($_SESSION["username"])) {
         <div class="row" style="margin-top: 3em;">
             <!-- Perulangan Card -->
             <?php
-            require "proses/koneksi.php";
+            require "proses/koneksiuser.php";
             $search = isset($_GET['search']) ? $_GET['search'] : '';
             if ($search) {
                 $query = mysqli_query($koneksi, "SELECT * FROM produk WHERE nama_produk LIKE '%$search%'");
@@ -88,10 +87,10 @@ if (empty($_SESSION["username"])) {
                         <div class="card-body" style="background-color: #F5F5F5;">
                             <p class="card-title text-muted"><?php echo $data['jenis']; ?></p>
                             <h5 class="card-title"><?php echo $data['nama_produk']; ?></h5>
-                            <h5 class="card-title" style="color: #004577;">Rp. <?php echo $data['harga']; ?>
+                            <h5 class="card-title" style="color: #004577;">Rp. <?php echo formatRupiah($data['harga']); ?>
                                 <span class="text-muted">/Bulan</span>
                             </h5>
-                            <h6 style="color: #004577; font-weight: normal;">Tersedia:
+                            <h6 style="color: #004577; font-weight: normal;">Stok Tersedia:
                                 <span style="color: #28a745;"><?php echo $data['stok']; ?> kamar</span>
                             </h6>
                             <div class="harga mt-4 d-flex">
@@ -163,13 +162,10 @@ if (empty($_SESSION["username"])) {
                         <a href="#home" class="footer-hover">Home</a>
                     </p>
                     <p>
-                        <a href="#about" class="footer-hover">About Us</a>
-                    </p>
-                    <p>
-                        <a href="#dokumentasi" class="footer-hover">Our Mission</a>
-                    </p>
-                    <p>
                         <a href="#produk" class="footer-hover">Product</a>
+                    </p>
+                    <p>
+                        <a href="#about" class="footer-hover">About Us</a>
                     </p>
                 </div>
                 <div class="col-3 mt-4">
@@ -183,6 +179,12 @@ if (empty($_SESSION["username"])) {
                     <h4>ALAMAT</h4>
                     <div class="mt-5">
                         Jl. Telekomunikasi No. 1 Terusan Buah Batu. Bandung 40257, Jawa Barat, Indonesia<br>
+                    </div>
+                </div>
+                <div class="col-3 mt-4">
+                    <h4>TEAM</h4>
+                    <div class="mt-2">
+                        Faris Yahya<br>Cedric Satria<br>Geoffrey Putra<br>Ridho Muhammad<br>Rizky Firman
                     </div>
                 </div>
             </div>

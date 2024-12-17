@@ -107,9 +107,8 @@ $data = mysqli_fetch_assoc($query);
             </div>
             <ul class="menu-items">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#sellers">About</a></li>
-                <li><a href="#news">Documentation</a></li>
-                <li><a href="#contact">Produk</a></li>
+                <li><a href="#produk">Product</a></li>
+                <li><a href="#about">About Us</a></li>
             </ul>
         </div>
 
@@ -205,37 +204,43 @@ $data = mysqli_fetch_assoc($query);
 
 
         <!-- Footer Start -->
-        <footer style="background-color:#F5F5F5;padding-bottom: 1em">
-            <div class="container" style="margin-top: 7em;color:#004577;">
-                <div class="row d-flex justify-content-center text-center">
-                    <div class="col-3 mt-4 foter">
-                        <h4>LINK</h4>
-                        <p class="mt-3">
-                            <a href="#home" class="footer-hover">Home</a>
-                        </p>
-                        <p>
-                            <a href="#produk" class="footer-hover">Product</a>
-                        </p>
-                        <p>
-                            <a href="#pemesanan" class="footer-hover">Order</a>
-                        </p>
+        <footer style="background-color: #F5F5F5;padding-bottom: 1em">
+        <div class="container" style="margin-top: 7em;color:#004577;">
+            <div class="row d-flex justify-content-center text-center">
+                <div class="col-3 mt-4 foter">
+                    <h4>LINK</h4>
+                    <p class="mt-3">
+                        <a href="#home" class="footer-hover">Home</a>
+                    </p>
+                    <p>
+                        <a href="#produk" class="footer-hover">Product</a>
+                    </p>
+                    <p>
+                        <a href="#about" class="footer-hover">About Us</a>
+                    </p>
+                </div>
+                <div class="col-3 mt-4">
+                    <h4>HUBUNGI KAMI</h4>
+                    <div class="mt-5">
+                        <p> +6282190908787</p>
+                        <p>cs@juragankost.com</p>
                     </div>
-                    <div class="col-3 mt-4">
-                        <h4>HUBUNGI KAMI</h4>
-                        <div class="mt-5">
-                            <p> +6282190908787</p>
-                            <p>cs@juragankost.com</p>
-                        </div>
+                </div>
+                <div class="col-3 mt-4">
+                    <h4>ALAMAT</h4>
+                    <div class="mt-5">
+                        Jl. Telekomunikasi No. 1 Terusan Buah Batu. Bandung 40257, Jawa Barat, Indonesia<br>
                     </div>
-                    <div class="col-3 mt-4">
-                        <h4>ALAMAT</h4>
-                        <div class="mt-5">
-                            Jl. Telekomunikasi No. 1 Terusan Buah Batu. Bandung 40257, Jawa Barat, Indonesia<br>
-                        </div>
+                </div>
+                <div class="col-3 mt-4">
+                    <h4>TEAM</h4>
+                    <div class="mt-2">
+                        Faris Yahya<br>Cedric Satria<br>Geoffrey Putra<br>Ridho Muhammad<br>Rizky Firman
                     </div>
                 </div>
             </div>
-        </footer>
+        </div>
+    </footer>
 
 
 

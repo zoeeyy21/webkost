@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 03, 2024 at 07:38 AM
+-- Generation Time: Dec 17, 2024 at 11:12 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -53,18 +53,24 @@ CREATE TABLE `produk` (
   `foto` varchar(100) DEFAULT NULL,
   `jenis` varchar(50) DEFAULT NULL,
   `lokasi` varchar(50) NOT NULL,
-  `deskripsi` varchar(1000) NOT NULL
+  `deskripsi` varchar(1000) NOT NULL,
+  `stok` int(11) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `produk`
 --
 
-INSERT INTO `produk` (`id_produk`, `nama_produk`, `harga`, `foto`, `jenis`, `lokasi`, `deskripsi`) VALUES
-(30, 'Kost SIGMA', 1000000, 'Kamar4.jpg', '', 'Bandung - Buah Batu', 'kost strategis dekat telkom university'),
-(31, 'Kost RUSDI', 1500000, 'Kamar6.jpg', '', 'Bandung - Dayeuhkolot', 'kost strategis dekat telkom university full furniture'),
-(32, 'Kost WINDAH', 1200000, '1a9d36e3-33aa-4f22-9902-bc188294f206.jpeg', '', 'Bandung - Batununggal', 'kost strategis dekat pusat kota full furniture'),
-(33, 'Kost SEJAHTERA', 900000, '2b7d32d0-bcf1-4bb3-a26a-f05fe442eebe.jpeg', '', 'Bandung - Lengkong', 'kost strategis dekat pusat kota full furniture');
+INSERT INTO `produk` (`id_produk`, `nama_produk`, `harga`, `foto`, `jenis`, `lokasi`, `deskripsi`, `stok`) VALUES
+(35, 'Kost Pak Ruslan', 2000000, 'Kamar1.jpg', 'Campur', 'Bandung', 'kost strategis dekat telkom university full furniture', 2),
+(36, 'Kost Rusdi77', 1500000, 'Kamar2.jpg', 'Laki-Laki', 'Bandung - Buah Batu', 'kost bagus dan murah', 3),
+(37, 'Kost AdamJaya', 13000000, 'kamar.jpeg', 'Perempuan', 'Bandung - Batununggal', 'Kost perempuan aman bebas banjir', 2),
+(38, 'Kost RumahKu9', 1000000, 'Kamar4.jpg', 'Campur', 'Bandung - Dayeuhkolot', 'kost bagus dan murah', 3),
+(39, 'Kost kenanga41', 900000, 'Kamar6.jpg', 'Laki-Laki', 'Bandung - Dayeuhkolot', 'kost strategis dekat telkom university full furniture', 2),
+(40, 'Kost syariah421', 800000, 'Kamar7.jpg', 'Perempuan', 'Bandung - Buah Batu', 'kost strategis dekat telkom university wc dalam', 3),
+(41, 'Kost Himalaya', 850000, 'Kamar8.jpg', 'Campur', 'Bandung - Buah Batu', 'kost strategis dekat telkom university wc dalam dan AC', 2),
+(42, 'Kost Sigma99', 950000, 'Kamar9.jpeg', 'Campur', 'Bandung - Buah Batu', 'kost strategis dekat telkom university wc dalam dan AC', 3),
+(43, 'Kost Ambatron77', 1200000, 'Kamar5.jpg', 'Campur', 'Bandung - Buah Batu', 'kost strategis dekat telkom university wc dalam dan AC', 2);
 
 -- --------------------------------------------------------
 
@@ -86,7 +92,9 @@ CREATE TABLE `tb_user` (
 
 INSERT INTO `tb_user` (`id_user`, `username`, `email`, `password`, `tipe`) VALUES
 (5, 'admin', 'admin@gmail.com', 'admin', 'admin'),
-(6, 'evo', 'evo@gmail.com', 'evo', 'evo');
+(6, 'evo', 'evo@gmail.com', 'evo', 'evo'),
+(7, 'rizky', 'rizky@gmail.com', '1234', '1234'),
+(8, 'user', 'user@gmail.com', '1234', '1234');
 
 --
 -- Indexes for dumped tables
@@ -118,19 +126,19 @@ ALTER TABLE `tb_user`
 -- AUTO_INCREMENT for table `pesanan`
 --
 ALTER TABLE `pesanan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `produk`
 --
 ALTER TABLE `produk`
-  MODIFY `id_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- AUTO_INCREMENT for table `tb_user`
 --
 ALTER TABLE `tb_user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
