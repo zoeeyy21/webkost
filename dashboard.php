@@ -17,6 +17,7 @@ if (empty($_SESSION["username"])) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <script src="https://unpkg.com/feather-icons"></script>
+    
 </head>
 
 <body>
@@ -90,7 +91,7 @@ if (empty($_SESSION["username"])) {
                             <h5 class="card-title" style="color: #004577;">Rp. <?php echo $data['harga']; ?>
                                 <span class="text-muted">/Bulan</span>
                             </h5>
-                            <h6 style="color: #004577; font-weight: normal;">Stok Tersedia:
+                            <h6 style="color: #004577; font-weight: normal;">Tersedia:
                                 <span style="color: #28a745;"><?php echo $data['stok']; ?> kamar</span>
                             </h6>
                             <div class="harga mt-4 d-flex">
