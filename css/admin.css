@@ -133,6 +133,7 @@
   .hal1 {
     background: whitesmoke;
     height: 100vh;
+    margin-top: 10px;
   }
   
   .hal1 .text {
@@ -177,7 +178,7 @@
     position: absolute;
     width: 22em;
     left: 72em;
-    top: 9em;
+    top: 13em;
     transition: all 0.4s ease-in-out;
   }
   
@@ -321,7 +322,7 @@
   
   .footer-hover{
     text-decoration: none;
-    color: #C7C8CC;
+    color: #004577;
   }
   
   .footer-hover:hover{

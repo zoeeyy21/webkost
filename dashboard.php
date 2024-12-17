@@ -28,9 +28,8 @@ if (empty($_SESSION["username"])) {
             </div>
             <ul class="menu-items">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#dokumentasi">Our Mission</a></li>
                 <li><a href="#produk">Product</a></li>
+                <li><a href="#about">About Us</a></li>
             </ul>
             <a href="logout.php" id="shopping-cart-button" onclick="return confirmLogout();">
                 <i data-feather="log-out" class="shopping"></i>
@@ -40,14 +39,15 @@ if (empty($_SESSION["username"])) {
     <!-- Navbar End -->
 
     <!-- Halaman 1 -->
+
     <div class="hal1" id="home">
         <div class="text">
             <h1>Welcome to<br>Juragan Kost</h1>
-            <h5><br>Website persewaan Kos-Kosan adalah platform inovatif <br>
-                Yang dirancang untuk memudahkan mahasiswa untuk mencari tempat tinggal.<br>Solusi terbaik untuk
-                persewaan Kamar Kos Anda
-                Kami menyediakan berbagai macam<br>Kamar Kos yang berkualitas
-                Mulai dari Kamar Kost Type Kecil, Besar, Menengah, On Budget dll.</h5>
+            <h5><br>Juragan Kost adalah platform persewaan kos inovatif yang memudahkan mahasiswa<br>dalam mencari
+                hunian nyaman
+                dan berkualitas.<br> Kami menyediakan berbagai pilihan kamar kost, mulai dari tipe kecil,<br> menengah,
+                besar,
+                hingga on-budget, sesuai kebutuhan dan anggaran Anda.<br> Praktis, cepat, dan tanpa ribet!</h5>
         </div>
         <img class="mic" src="asset/Kamardashboard.jpg" alt="">
         <img class="camera" src="asset/ " alt="">
@@ -55,6 +55,56 @@ if (empty($_SESSION["username"])) {
     </div>
     <!-- Halaman 1 End -->
 
+
+
+    <!-- Halaman 4 -->
+    <div class="container-fluid" style="margin-top: 6em;" id="produk">
+        <div class="title">
+            <h2>Pilihan Kamar Kost</h2>
+        </div>
+        <div class="container" style="margin-top: 3em;">
+            <form class="d-flex justify-content-center" role="search" method="GET" action="">
+                <input class="cari" type="search" name="search" placeholder="Cari Kost"
+                    value="<?php echo isset($_GET['search']) ? $_GET['search'] : ''; ?>">
+                <button class="cari-tombol" type="submit"><i data-feather="search" style="color: #004577;"></i></button>
+            </form>
+        </div>
+        <div class="row" style="margin-top: 3em;">
+            <!-- Perulangan Card -->
+            <?php
+            require "proses/koneksi.php";
+            $search = isset($_GET['search']) ? $_GET['search'] : '';
+            if ($search) {
+                $query = mysqli_query($koneksi, "SELECT * FROM produk WHERE nama_produk LIKE '%$search%'");
+            } else {
+                $query = mysqli_query($koneksi, "SELECT * FROM produk");
+            }
+
+            while ($data = mysqli_fetch_array($query)) { ?>
+                <div class="col-3 d-flex justify-content-center mb-5">
+                    <div class="card shadow" style="width: 18rem;">
+                        <img src="asset/<?php echo $data['foto']; ?>" class="card-img-top" alt="..." style="height: 12em">
+                        <div class="card-body" style="background-color: #F5F5F5;">
+                            <p class="card-title text-muted"><?php echo $data['jenis']; ?></p>
+                            <h5 class="card-title"><?php echo $data['nama_produk']; ?></h5>
+                            <h5 class="card-title" style="color: #004577;">Rp. <?php echo $data['harga']; ?>
+                                <span class="text-muted">/Bulan</span>
+                            </h5>
+                            <h6 style="color: #004577; font-weight: normal;">Stok Tersedia:
+                                <span style="color: #28a745;"><?php echo $data['stok']; ?> kamar</span>
+                            </h6>
+                            <div class="harga mt-4 d-flex">
+                                <p class="d-flex" style="gap: 0.5em"><i data-feather="map-pin" class="shopping"></i>Bandung
+                                </p>
+                                <a href="detailproduk.php?id=<?= $data['id_produk'] ?>"><button
+                                        class="booking">Booking</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <?php } ?>
+        </div>
+    </div>
     <!-- Halaman 2 -->
     <div class="about" id="about">
         <div class="title">
@@ -101,83 +151,18 @@ if (empty($_SESSION["username"])) {
             </div>
         </div>
     </div>
-
     <!-- Halaman 2 End -->
 
-
-    <!-- Halaman 4 -->
-    <div class="container-fluid" style="margin-top: 6em;" id="produk">
-        <div class="title">
-            <h2>Pilihan Kamar Kost</h2>
-        </div>
-        <div class="container" style="margin-top: 3em;">
-            <form class="d-flex justify-content-center" role="search" method="GET" action="">
-                <input class="cari" type="search" name="search" placeholder="Cari Kost"
-                    value="<?php echo isset($_GET['search']) ? $_GET['search'] : ''; ?>">
-                <button class="cari-tombol" type="submit"><i data-feather="search" style="color: #004577;"></i></button>
-            </form>
-        </div>
-        <div class="row" style="margin-top: 3em;">
-            <!-- Perulangan Card -->
-            <?php
-            require "proses/koneksi.php";
-            $search = isset($_GET['search']) ? $_GET['search'] : '';
-            if ($search) {
-                $query = mysqli_query($koneksi, "SELECT * FROM produk WHERE nama_produk LIKE '%$search%'");
-            } else {
-                $query = mysqli_query($koneksi, "SELECT * FROM produk");
-            }
-
-            while ($data = mysqli_fetch_array($query)) { ?>
-                <div class="col-3 d-flex justify-content-center mb-5">
-                    <div class="card shadow" style="width: 18rem;">
-                        <img src="asset/<?php echo $data['foto']; ?>" class="card-img-top" alt="..." style="height: 12em">
-                        <div class="card-body" style="background-color: #F5F5F5;">
-                            <p class="card-title text-muted"><?php echo $data['jenis']; ?></p>
-                            <h5 class="card-title"><?php echo $data['nama_produk']; ?></h5>
-                            <h5 class="card-title" style="color: #004577;">Rp. <?php echo $data['harga']; ?><span
-                                    class="text-muted">/Bulan</span></h5>
-                            <div class="harga mt-4 d-flex">
-                                <p class="d-flex" style="gap: 0.5em"><i data-feather="map-pin" class="shopping"></i>Bandung
-                                </p>
-                                <a href="detailproduk.php?id=<?= $data['id_produk'] ?>"><button
-                                        class="booking">Booking</button></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            <?php } ?>
-        </div>
-    </div>
-
-    <!-- Halaman 3: Our Mission -->
-    <div class="card text-center" style="margin-top: 7em;" id="dokumentasi">
-        <div class="card-header">
-            Our Mission
-        </div>
-        <div class="card-body bdy" style="height: 18em;">
-            <h2 class="card-title" style="margin-top: 2em;">Juragan Kos</h2>
-            <p class="card-text">Misi kami adalah bikin hidup mahasiswa lebih gampang buat cari kost tanpa ribet dan
-                mahal. <br> Nggak perlu mikirin beli rumah, karena sistem sewa fleksibel kami bikin kamu hemat biaya,
-                hemat
-                tempat, dan tetap nyaman.<br> Di sini, semuanya serba simpel, transparan, dan pastinya sesuai kebutuhan
-                kamu
-                biar fokus ke hal penting lain kayak kuliah, ngejar mimpi, atau sekadar menikmati hidup!
-            </p>
-        </div>
-    </div>
-    <!-- Halaman 3 End -->
-
-    <footer style="background-color: #004577;padding-bottom: 1em">
-        <div class="container" style="margin-top: 7em;color: #C7C8CC;">
+    <footer style="background-color: #F5F5F5;padding-bottom: 1em">
+        <div class="container" style="margin-top: 7em;color:#004577;">
             <div class="row d-flex justify-content-center text-center">
                 <div class="col-3 mt-4 foter">
-                    <h2>Link</h2>
-                    <p class="mt-5">
+                    <h4>LINK</h4>
+                    <p class="mt-3">
                         <a href="#home" class="footer-hover">Home</a>
                     </p>
                     <p>
-                        <a href="#about" class="footer-hover">About</a>
+                        <a href="#about" class="footer-hover">About Us</a>
                     </p>
                     <p>
                         <a href="#dokumentasi" class="footer-hover">Our Mission</a>
@@ -187,14 +172,15 @@ if (empty($_SESSION["username"])) {
                     </p>
                 </div>
                 <div class="col-3 mt-4">
+                    <h4>HUBUNGI KAMI</h4>
                     <div class="mt-5">
+                        <p> +6282190908787</p>
+                        <p>cs@juragankost.com</p>
                     </div>
                 </div>
                 <div class="col-3 mt-4">
-                    <h2>Alamat</h2>
+                    <h4>ALAMAT</h4>
                     <div class="mt-5">
-                        +6282190908787<br>
-                        <br>
                         Jl. Telekomunikasi No. 1 Terusan Buah Batu. Bandung 40257, Jawa Barat, Indonesia<br>
                     </div>
                 </div>

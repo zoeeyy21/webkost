@@ -164,12 +164,12 @@ if (empty($_SESSION["username"])) {
         </table>
     </div>
 
-    <footer style="background-color: #004577;padding-bottom: 1em">
-        <div class="container" style="margin-top: 7em;color: #C7C8CC;">
+    <footer style="background-color:#F5F5F5;padding-bottom: 1em">
+        <div class="container" style="margin-top: 7em;color:#004577;">
             <div class="row d-flex justify-content-center text-center">
                 <div class="col-3 mt-4 foter">
-                    <h2>Link</h2>
-                    <p class="mt-5">
+                    <h4>LINK</h4>
+                    <p class="mt-3">
                         <a href="#home" class="footer-hover">Home</a>
                     </p>
                     <p>
@@ -180,14 +180,15 @@ if (empty($_SESSION["username"])) {
                     </p>
                 </div>
                 <div class="col-3 mt-4">
-                    <div class="mt-5">
+                    <h4>HUBUNGI KAMI</h4>
+                        <div class="mt-5">
+                        <p> +6282190908787</p>
+                        <p>cs@juragankost.com</p>
                     </div>
                 </div>
                 <div class="col-3 mt-4">
-                    <h2>Alamat</h2>
+                    <h4>ALAMAT</h4>
                     <div class="mt-5">
-                        +62812121212<br>
-                        <br>
                         Jl. Telekomunikasi No. 1 Terusan Buah Batu. Bandung 40257, Jawa Barat, Indonesia<br>
                     </div>
                 </div>
