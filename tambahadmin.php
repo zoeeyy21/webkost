@@ -57,8 +57,13 @@ $data = mysqli_fetch_assoc($query);
                     </div>
                     <div class="input">
                         <label for="">Jenis</label><br>
-                        <input type="text" class="mt-3" name="jenis" placeholder="Masukkan jenis kost anda Laki-Laki/Perempuan/Campur">
+                        <select class="mt-3" name="jenis">
+                            <option value="Laki-Laki">Laki-Laki</option>
+                            <option value="Perempuan">Perempuan</option>
+                            <option value="Campur">Campur</option>
+                        </select>
                     </div>
+
                     <div class="input">
                         <label for="">Lokasi</label><br>
                         <input type="text" class="mt-3" name="lokasi" placeholder="Lokasi kost anda">

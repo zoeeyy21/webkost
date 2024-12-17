@@ -80,29 +80,54 @@ if (empty($_SESSION["username"])) {
                 $query = mysqli_query($koneksi, "SELECT * FROM produk");
             }
 
-            while ($data = mysqli_fetch_array($query)) { ?>
-                <div class="col-3 d-flex justify-content-center mb-5">
-                    <div class="card shadow" style="width: 18rem;">
-                        <img src="asset/<?php echo $data['foto']; ?>" class="card-img-top" alt="..." style="height: 12em">
-                        <div class="card-body" style="background-color: #F5F5F5;">
-                            <p class="card-title text-muted"><?php echo $data['jenis']; ?></p>
-                            <h5 class="card-title"><?php echo $data['nama_produk']; ?></h5>
-                            <h5 class="card-title" style="color: #004577;">Rp. <?php echo formatRupiah($data['harga']); ?>
-                                <span class="text-muted">/Bulan</span>
-                            </h5>
-                            <h6 style="color: #004577; font-weight: normal;">Stok Tersedia:
-                                <span style="color: #28a745;"><?php echo $data['stok']; ?> kamar</span>
-                            </h6>
-                            <div class="harga mt-4 d-flex">
-                                <p class="d-flex" style="gap: 0.5em"><i data-feather="map-pin" class="shopping"></i>Bandung
-                                </p>
-                                <a href="detailproduk.php?id=<?= $data['id_produk'] ?>"><button
-                                        class="booking">Booking</button></a>
-                            </div>
-                        </div>
+            while ($data = mysqli_fetch_array($query)) { 
+    if ($data['stok'] > 0) { ?>
+        <div class="col-3 d-flex justify-content-center mb-5">
+            <div class="card shadow" style="width: 18rem;">
+                <img src="asset/<?php echo $data['foto']; ?>" class="card-img-top" alt="..." style="height: 12em">
+                <div class="card-body" style="background-color: #F5F5F5;">
+                    <p class="card-title text-muted"><?php echo $data['jenis']; ?></p>
+                    <h5 class="card-title"><?php echo $data['nama_produk']; ?></h5>
+                    <h5 class="card-title" style="color: #004577;">Rp. <?php echo formatRupiah($data['harga']); ?>
+                        <span class="text-muted">/Bulan</span>
+                    </h5>
+                    <h6 style="color: #004577; font-weight: normal;">Stok Tersedia:
+                        <span style="color: #28a745;"><?php echo $data['stok']; ?> kamar</span>
+                    </h6>
+                    <div class="harga mt-4 d-flex">
+                        <p class="d-flex" style="gap: 0.5em"><i data-feather="map-pin" class="shopping"></i>Bandung
+                        </p>
+                        <a href="detailproduk.php?id=<?= $data['id_produk'] ?>">
+                            <button class="booking">Booking</button>
+                        </a>
                     </div>
                 </div>
-            <?php } ?>
+            </div>
+        </div>
+    <?php } else { ?>
+        <div class="col-3 d-flex justify-content-center mb-5">
+            <div class="card shadow" style="width: 18rem;">
+                <img src="asset/<?php echo $data['foto']; ?>" class="card-img-top" alt="..." style="height: 12em">
+                <div class="card-body" style="background-color: #F5F5F5;">
+                    <p class="card-title text-muted"><?php echo $data['jenis']; ?></p>
+                    <h5 class="card-title"><?php echo $data['nama_produk']; ?></h5>
+                    <h5 class="card-title" style="color: #004577;">Rp. <?php echo formatRupiah($data['harga']); ?>
+                        <span class="text-muted">/Bulan</span>
+                    </h5>
+                    <h6 style="color: #004577; font-weight: normal;">Stok Tersedia:
+                        <span style="color: #28a745;"><?php echo $data['stok']; ?> kamar</span>
+                    </h6>
+                    <div class="harga mt-4 d-flex">
+                        <p class="d-flex" style="gap: 0.5em"><i data-feather="map-pin" class="shopping"></i>Bandung
+                        </p>
+                        <button class="booking" disabled>Booking</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <?php } 
+} 
+ ?>
         </div>
     </div>
     <!-- Halaman 2 -->
