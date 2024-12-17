@@ -116,7 +116,7 @@ body::before {
 
 .kotak  p a{
     text-decoration: none;
-    color: var(--blue-color);
+    color: #025ea0;
     font-family: var(--text);
     font-size: 19px;
 }

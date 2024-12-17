@@ -3,9 +3,17 @@ session_start();
 if (empty($_SESSION["username"])) {
     header("Location: login.php");
 }
-
-
 ?>
+
+<!-- Kelas SI-48-10 -->
+<!-- Kelompok 03 -->
+<!-- Anggota Kelompok -->
+<!-- 1. Geoffrey Putra (102022400215) -->
+<!-- 2. Cedric Satria Wibawa (102022400189) -->
+<!-- 3. Faris Yahya Ayyash Alfatih (102022400029) -->
+<!-- 4. Ridho Muhammad Zahran (102022400293) -->
+<!-- 5. Rizky Firman Nanda (102022400203) -->
+ 
 <!DOCTYPE html>
 <html lang="en">
 
@@ -132,8 +140,8 @@ if (empty($_SESSION["username"])) {
                     <th scope="col">Nama Produk</th>
                     <th scope="col">Jumlah</th>
                     <th scope="col">Harga</th>
-                    <th scope="col">Tanggal Sewa</th>
-                    <th scope="col">Tanggal pengembalian</th>
+                    <th scope="col">Tanggal Masuk</th>
+                    <th scope="col">Tanggal Keluar</th>
                     <th scope="col">Durasi</th>
                     <th scope="col">Total</th>
                     <th scope="col">Action</th>

@@ -34,7 +34,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $sewa = $start->format('Y-m-d');
         $kembali = $end->format('Y-m-d');
         $selisih = $difference->days;
-        $totalharga = $selisih * $subtotal;
+        $selisih_bulan = ceil($selisih / 30);
+        $totalharga = $selisih_bulan * $subtotal;
     } else {
         echo "Invalid date input.";
     }
@@ -48,6 +49,15 @@ $query = mysqli_query($koneksi, "SELECT * FROM produk WHERE id_produk = '$id'");
 $data = mysqli_fetch_assoc($query);
 
 ?>
+
+<!-- Kelas SI-48-10 -->
+<!-- Kelompok 03 -->
+<!-- Anggota Kelompok -->
+<!-- 1. Geoffrey Putra (102022400215) -->
+<!-- 2. Cedric Satria Wibawa (102022400189) -->
+<!-- 3. Faris Yahya Ayyash Alfatih (102022400029) -->
+<!-- 4. Ridho Muhammad Zahran (102022400293) -->
+<!-- 5. Rizky Firman Nanda (102022400203) -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -151,7 +161,7 @@ $data = mysqli_fetch_assoc($query);
                     <hr>
                     <div class="row d-flex align-items-center mt-5">
                         <div class="col-6">
-                            <h6>Tanggal Pemesanan</h6>
+                            <h6>Tanggal Masuk</h6>
                         </div>
                         <div class="col-6 text-start">
                             <?= $sewa ?>
@@ -162,7 +172,7 @@ $data = mysqli_fetch_assoc($query);
 
                     <div class="row d-flex align-items-center">
                         <div class="col-6">
-                            <h6>Tanggal Pengembalian</h6>
+                            <h6>Tanggal Keluar</h6>
                         </div>
                         <div class="col-6 text-start">
                             <?= $kembali ?>
