@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 17, 2024 at 11:12 AM
+-- Generation Time: Dec 17, 2024 at 12:02 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -40,6 +40,14 @@ CREATE TABLE `pesanan` (
   `total` int(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `pesanan`
+--
+
+INSERT INTO `pesanan` (`id`, `nama`, `email`, `nama_produk`, `jumlah`, `harga`, `tanggal_sewa`, `tanggal_pengembalian`, `durasi`, `total`) VALUES
+(27, 'bbgg', 'jnhfhhffgh@gmail.com', 'Kost Ambatron77', 1, 1200000, '2024-12-12', '2024-12-13', 1, 1200000),
+(28, 'bbgg', 'jnhfhhffgh@gmail.com', 'Kost kenanga41', 3, 900000, '2024-12-18', '2025-01-01', 14, 37800000);
+
 -- --------------------------------------------------------
 
 --
@@ -64,13 +72,13 @@ CREATE TABLE `produk` (
 INSERT INTO `produk` (`id_produk`, `nama_produk`, `harga`, `foto`, `jenis`, `lokasi`, `deskripsi`, `stok`) VALUES
 (35, 'Kost Pak Ruslan', 2000000, 'Kamar1.jpg', 'Campur', 'Bandung', 'kost strategis dekat telkom university full furniture', 2),
 (36, 'Kost Rusdi77', 1500000, 'Kamar2.jpg', 'Laki-Laki', 'Bandung - Buah Batu', 'kost bagus dan murah', 3),
-(37, 'Kost AdamJaya', 13000000, 'kamar.jpeg', 'Perempuan', 'Bandung - Batununggal', 'Kost perempuan aman bebas banjir', 2),
+(37, 'Kost AdamJaya', 1300000, 'kamar.jpeg', 'Perempuan', 'Bandung - Batununggal', 'Kost perempuan aman bebas banjir', 2),
 (38, 'Kost RumahKu9', 1000000, 'Kamar4.jpg', 'Campur', 'Bandung - Dayeuhkolot', 'kost bagus dan murah', 3),
-(39, 'Kost kenanga41', 900000, 'Kamar6.jpg', 'Laki-Laki', 'Bandung - Dayeuhkolot', 'kost strategis dekat telkom university full furniture', 2),
+(39, 'Kost kenanga41', 900000, 'Kamar6.jpg', 'Laki-Laki', 'Bandung - Dayeuhkolot', 'kost strategis dekat telkom university full furniture', 3),
 (40, 'Kost syariah421', 800000, 'Kamar7.jpg', 'Perempuan', 'Bandung - Buah Batu', 'kost strategis dekat telkom university wc dalam', 3),
 (41, 'Kost Himalaya', 850000, 'Kamar8.jpg', 'Campur', 'Bandung - Buah Batu', 'kost strategis dekat telkom university wc dalam dan AC', 2),
 (42, 'Kost Sigma99', 950000, 'Kamar9.jpeg', 'Campur', 'Bandung - Buah Batu', 'kost strategis dekat telkom university wc dalam dan AC', 3),
-(43, 'Kost Ambatron77', 1200000, 'Kamar5.jpg', 'Campur', 'Bandung - Buah Batu', 'kost strategis dekat telkom university wc dalam dan AC', 2);
+(43, 'Kost Ambatron77', 1200000, 'Kamar5.jpg', 'Campur', 'Bandung - Buah Batu', 'kost strategis dekat telkom university wc dalam dan AC', 0);
 
 -- --------------------------------------------------------
 
@@ -126,7 +134,7 @@ ALTER TABLE `tb_user`
 -- AUTO_INCREMENT for table `pesanan`
 --
 ALTER TABLE `pesanan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `produk`
