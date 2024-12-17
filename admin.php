@@ -42,7 +42,7 @@ if (empty($_SESSION["username"])) {
     <div class="hal1" id="home">
         <div class="text">
             <h1>Welcome <?= $_SESSION["username"]; ?></h1>
-            <h5>Selamat datang di Juragan Kost.<br><br>
+            <h5><br>Selamat datang di Juragan Kost.<br>
                 Solusi terbaik untuk persewaan Kamar Kos Anda<br>
                 Kami menyediakan berbagai macam Kamar Kos yang berkualitas<br>
                 Mulai dari Kamar Kost Type Kecil, Besar, Menengah, On Budget dll.</h5>

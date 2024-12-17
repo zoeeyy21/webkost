@@ -20,7 +20,7 @@
             <input type="password" id="input" name="password" placeholder=" " require>
             <label for="input">Password</label>
         </div>  
-        <p>Don't have account?<a href="signup.php"> Sign Up</a></p>
+        <p>Don't have an account?<a href="signup.php"> Sign Up</a></p>
         <center>
         <button type="submit" name="submit">Login</button>
         </center>
